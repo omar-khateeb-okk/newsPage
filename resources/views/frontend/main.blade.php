@@ -38,6 +38,7 @@
                         <li class="nav-item">
                             <a class="nav-link" href="/">Home</a>
                         </li>
+
                         <li class="nav-item dropdown has-submenu menu hidden-md-down  hidden-xs-down">
                             <a class="nav-link" href="#" id="dropdown01" data-toggle="dropdown"
                                 aria-haspopup="true" aria-expanded="false">Categories</a>
@@ -53,6 +54,7 @@
                                                         >{{$category->name}}</button>
                                                     </a>
                                                 @endforeach
+
                                             </div>
                                         </div>
                                     </div>
@@ -62,7 +64,15 @@
                         <li class="nav-item">
                             <a class="nav-link" href="{{url('admin/dashboard')}}">Dashboard</a>
                         </li>
+
                         <li class="nav-item ms-auto">
+                            <form action="{{ route('logout.user') }}" method="POST">
+                                @csrf
+                                <button type="submit" class="btn btn-danger">
+                                    Logout
+                                </button>
+                            </form>
+                        </li>
 
                             <div class="relative flex items-top justify-center min-h-screen  dark:bg-gray-700 sm:items-center ">
                                 @if (Route::has('login'))
@@ -75,9 +85,12 @@
                                             @if (Route::has('register'))
                                                 <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Register</a>
                                             @endif
+
                                         @endauth
+
                                     </div>
                             @endif
+                            </div>
                         </li>
                     </ul>
                     </ul>
@@ -134,6 +147,7 @@
 
             </div><!-- end row -->
         </div><!-- end container -->
+        </div>
     </section>
 
     <footer class="footer">

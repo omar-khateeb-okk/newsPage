@@ -31,7 +31,7 @@
                             </button>
                         </div>
                         <a href="{{url('/login')}}" class="btn btn-primary">Login</a>
-                        <a href="{{url('/register')}}" class="btn btn-primary">Login</a>
+                        <a href="{{url('/register')}}" class="btn btn-primary">register</a>
                     </form>
 
                 </div>
