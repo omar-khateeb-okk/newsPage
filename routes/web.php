@@ -56,4 +56,4 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::post('logout',[\App\Http\Controllers\Frontend\FrontendController::class,'logout'])->name('logout.user');
+Route::post('/logout',[\App\Http\Controllers\Frontend\FrontendController::class,'logout'])->name('logout.user');

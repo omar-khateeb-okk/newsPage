@@ -52,7 +52,7 @@
                             <a href="{{url('admin/post/'.$item->id)}}" class="btn btn-success">Edit</a>
                         </td>
                         <td>
-                            <a href="{{url('admin/delete-post/'.$item->id)}}" class="btn btn-danger">Delete</a>
+                            <a href="{{url('admin/delete-post/'.$item->id)}}" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this Post?')">Delete</a>
                         </td>
                     </tr>
                     @endforeach
